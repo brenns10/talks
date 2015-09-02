@@ -1,0 +1,11 @@
+name: "Stephen Brennan"
+url: "http://stephen-brennan.com/talks"
+
+paginate: 5
+paginate_path: "page:num"
+
+markdown: redcarpet
+highlighter: pygments
+permalink: pretty
+
+exclude: ["README.md"]

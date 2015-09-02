@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  <div id="navigation" class="clearfix">
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/projects">Projects</a>
+    <a href="/resume">Resume</a>
+  </div>
+
+  {{ content }}
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <a href="/legal">Legal</a> &#8226;
+      <a href="/blog/rss.xml">RSS</a>
+  </div>
+  </body>
+</html>

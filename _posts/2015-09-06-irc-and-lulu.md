@@ -67,6 +67,7 @@ Stephen Brennan
 - Server: irc.case.edu
 - Port: 6697
 - Use SSL? Yes.
-    - If you see an option to accept invalid certificates, enable it.
+    - If you see an option to accept invalid certificates, enable it.  If you
+      see warnings about invalid certificates, ignore them (sorry!).
 
 {{site.endslide}}

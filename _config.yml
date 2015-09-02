@@ -9,3 +9,10 @@ highlighter: pygments
 permalink: pretty
 
 exclude: ["README.md"]
+
+startslide: "<section data-markdown><script type='text/template'>"
+nextslide: "</script></section><section data-markdown><script type='text/template'>"
+endslide: "</script></section>"
+
+startvertical: "<section>"
+endvertical: "</section>"

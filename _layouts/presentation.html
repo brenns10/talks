@@ -3,14 +3,28 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>{{ page.title }} &#8226; {{ site.name }}</title>
+
+    <!-- Reveal.JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/js/head.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/js/reveal.js"></script>
+
+    <!-- Main Reveal.JS Style -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/reveal.min.css">
+
+    <!-- Reveal.JS Theme -->
     {% if page.theme %}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/theme/{{page.theme}}.min.css">
    {% else %}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/css/theme/solarized.min.css">
-   {% endif %}          
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/lib/js/head.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.1.0/js/reveal.js"></script>
+    {% endif %}
+
+    <!-- Highlight.JS Syntax Style -->
+    {% if page.highlight %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/{{page.highlight}}.min.css">
+    {% else %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/zenburn.min.css">
+    {% endif %}
+
   </head>
   <body>
     <div class="reveal">

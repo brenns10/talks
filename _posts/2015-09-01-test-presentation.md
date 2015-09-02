@@ -21,6 +21,10 @@ This is an example presentation.  I'm using markdown to write it.
 > Blockquotes are effortless
 
     print('Syntax highlighting is easy!')
+{{ site.nextslide }}
+### Typeset Math With MathJax
+
+$$\int_a^b f(x) \: \mathrm{d}x$$
 {{ site.endslide }}
 
 {{ site.startvertical }}

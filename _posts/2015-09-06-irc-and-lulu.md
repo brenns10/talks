@@ -16,7 +16,9 @@ OpenHacks 9/6/15
 
 Stephen Brennan
 
-{{site.nextslide}}
+{{site.endslide}}
+{{site.startvertical}}
+{{site.startslide}}
 
 ## What is IRC?
 
@@ -59,7 +61,20 @@ Stephen Brennan
     - iOS: I hear LimeChat has a mobile version
     - Android:
       [AndroIRC](https://play.google.com/store/apps/details?id=com.androirc)
-- Pick a nickname (i.e. username) you want to chat with.
+
+{{site.endslide}}
+{{site.endvertical}}
+
+{{site.startvertical}}
+{{site.startslide}}
+
+## How does it work?
+
+- First, you connect to the server (I'll cover that shortly).
+- Then, you choose a *nickname*.  This is like a username.
+    - IRC doesn't by default protect your nick.
+    - I'll cover how to keep others from using it.
+- Next, join some *channels*.  These are just "chat rooms".
 
 {{site.nextslide}}
 
@@ -71,4 +86,56 @@ Stephen Brennan
     - If you see an option to accept invalid certificates, enable it.  If you
       see warnings about invalid certificates, ignore them (sorry!).
 
+{{site.nextslide}}
+
+## Choosing a nick
+
+- Your client may offer a textbox when you connect.
+- Otherwise, use the command `/nick [your nickname here]`.
+    - This is an IRC command!
+
+{{site.nextslide}}
+
+## IRC Commands
+
+- Besides just sending messages to channels, IRC has some commands you can use.
+- All clients allow you to do commands by starting your message with a `/`
+  (forward slash).
+- Many clients give you GUI options to run these commands.
+    - I can't teach you every GUI, but I can teach you what the commands are.
+
+{{site.nextslide}}
+
+## Some commands
+
+- `/list` - list all channels on the server
+- `/join #channel` - joins the channel `#channel`
+- `/part [#channel]` - leave a channel
+- `/msg username message` - sends `username` a `message` directly (only they see
+  it).
+- `/me [message]` - "emote" your message.
+    - EG: If I send `/me laughs`, the channel will see `brenns10 laughs`.
+
+{{site.nextslide}}
+
+## Keeping your nick safe
+
+- "`NickServ`" prevents others from using your username.
+- It associates a password with your nickname.
+- `/nick [whatever-you-want]`
+- `/msg NickServ register [password] [email]`
+- `/msg NickServ set kill on`
+- Each time you connect:
+    - `/msg NickServ identify [password]`
+
+{{site.nextslide}}
+
+## Making it all easier
+
+- Most clients make IRC very easy.
+- They remember the channels you use.
+- They can automatically set your nick.
+- They can automatically identify you to `NickServ`.
+
 {{site.endslide}}
+{{site.endvertical}}

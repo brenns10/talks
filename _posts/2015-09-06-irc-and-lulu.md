@@ -109,7 +109,8 @@ Stephen Brennan
 ## Some commands
 
 - `/list` - list all channels on the server
-- `/join #channel` - joins the channel `#channel`
+- `/join #channel` - joins the channel `#channel` (creates it if it doesn't
+  exist).
 - `/part [#channel]` - leave a channel
 - `/msg username message` - sends `username` a `message` directly (only they see
   it).
@@ -139,3 +140,87 @@ Stephen Brennan
 
 {{site.endslide}}
 {{site.endvertical}}
+
+{{site.startvertical}}
+{{site.startslide}}
+
+## CWRU IRC channels
+
+- `#cwru` - general conversation, "lobby".  **Most conversation happens here**.
+- `#acm` - conversation related to our ACM chapter
+- `#ieee` - conversation related to our IEEE chapter
+- `#hackers` - conversation related to HacSoc
+- `#eecs132` - you can have a channel for any class you're in!
+- Create your own for any topic you'd like.  `/invite` your friends in!
+
+{{site.nextslide}}
+
+## CWRU IRC people
+
+- `siretrm` - Thomas Murphy
+- `mason` - Andrew Mason
+- `brenns10` - Stephen Brennan
+- `jay_wild` - Aidan Campbell
+- Feel free to ask anyone on IRC who they are, but they may prefer to keep their
+  identity private.
+
+{{site.nextslide}}
+
+## Meet Lulu!
+
+- Lulu is our IRC chatbot!
+- It exists to make IRC more fun.
+- `lulu, pug me` - gives you a picture of a pug
+- `lulu, kitten me` - gives you a picture of a kitten
+- `lulu, youtube me [query]` - searches YouTube and gives you a link
+- Lots more commands at <http://hacsoc.org/lulu>.
+
+{{site.nextslide}}
+
+## How does Lulu work?
+
+- Lulu is based on GitHub's bot, Hubot.
+- We have our own fork.
+- Its source lives at <https://github.com/hacsoc/lulu>
+- It's written in [CoffeeScript](http://coffeescript.org), a language that
+  compiles to JavaScript.
+
+{{site.nextslide}}
+
+## Can I make Lulu do more cool stuff?
+
+Why yes, yes you can!
+
+- First, install [Node](https://nodejs.org/en/) (if you use Linux, use your
+  package manager).
+- Then, fork [Lulu](https://github.com/hacsoc/lulu) on GitHub.
+- Then, clone your copy of Lulu.
+- Run `npm install` in the root of your clone.
+- Run `bin/hubot` to run Lulu on your terminal.
+
+{{site.nextslide}}
+
+## Making Lulu plugins
+
+- Write your plugin in the `scripts/` directory, using either Javascript or
+  CoffeeScript.
+- Test it by doing `bin/hubot`.
+- When you're done, git commit, git push, and create a pull request!
+- Hubot Documentation:
+    - <https://hubot.github.com/docs/>
+- Look at the code for other scripts to help you get started.
+
+{{site.endslide}}
+{{site.endvertical}}
+
+{{site.startslide}}
+
+## Conclusion
+
+- That's all I have for IRC!
+- Lulu is ready for your pull requests.
+- We'll see you on IRC!
+
+Questions?
+
+{{site.endslide}}

@@ -5,11 +5,14 @@ description: >
   to log in, what the jargon means, and how to use it for fun and profit.
   Finally, meet our IRC bot "Lulu", and learn how to hack new features into it!
 layout: presentation
+theme: night  
 ---
 
 {{site.startslide}}
 
 # IRC and Lulu
+
+OpenHacks 9/6/15
 
 Stephen Brennan
 
@@ -17,13 +20,10 @@ Stephen Brennan
 
 ## What is IRC?
 
-- A chat protocol
 - **I**nternet **R**elay **C**hat
-- Older than the Web (IRC created in 1988, vs Web proposed by Tim Berners-Lee
-  1989).
+- A chat protocol used all over the world.
+- Anyone connected to the same server can chat with others on it.
 - We host our own [IRC server](http://irc.case.edu)!
-- You run a "client" on your computer, point it at our server, and talk with
-  other HacSoc people!
 
 {{site.nextslide}}
 
@@ -50,6 +50,7 @@ Stephen Brennan
 ## Where do I sign up?
 
 - There's no sign-up!  Just connect and go.
+- Mibbit web client: <http://irc.case.edu>
 - Download a client.
     - Windows: [HexChat](https://hexchat.github.io/)
     - Mac: [LimeChat](http://limechat.net/mac/)

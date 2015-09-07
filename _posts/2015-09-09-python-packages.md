@@ -70,4 +70,27 @@ Don't take notes, my slides are at:
 - If you don't have root, try `pip install --user package-name`.
 - Or, check out [Virtualenv](https://virtualenv.readthedocs.org/en/latest/).
 
+{{site.nextslide}}
+
+## Web development
+
+- [Django](https://www.djangoproject.com/) - widespread MVC framework, used by
+  Instagram, Pinterest, Disqus, Bitbucket, ...
+- [Flask](http://flask.pocoo.org/) - small "micro-framework" for simple apps.
+- [Tornado](http://www.tornadoweb.org/en/stable/) - scalable, non-blocking
+  networking library that works well for web dev
+- Other common names: Pyramid, Zope, Web.py
+
+{{site.nextslide}}
+
+## Databases
+
+- [Psycopg2](http://initd.org/psycopg/) - interface to PostgreSQL
+- [sqlite3](https://docs.python.org/3/library/sqlite3.html) - standard library
+  interface for small databases in local files
+- [SQLAlchemy](http://www.sqlalchemy.org/) - widely used
+  [object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping),
+  used by Dropbox, Hulu, reddit, Yelp, Uber, ...
+- Django has a good built-in object relational mapper, too.
+
 {{site.endslide}}

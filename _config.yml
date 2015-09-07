@@ -1,6 +1,7 @@
 name: "Stephen Brennan"
 url: "http://stephen-brennan.com/talks"
 baseurl: "/talks"
+root: "http://stephen-brennan.com"
 
 paginate: 5
 paginate_path: "page:num"

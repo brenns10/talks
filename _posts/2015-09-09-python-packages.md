@@ -1,5 +1,5 @@
 ---
-title: The World of Python Packages
+title: The World of Python Libraries
 description: >
   A talk given at a HacSoc meeting in conjunction with Jeff Copeland.  Jeff gave
   an introduction to Python, and this 15-minute presentation gives an overview
@@ -9,7 +9,9 @@ layout: presentation
 
 {{site.startslide}}
 
-# The World of Python Packages
+# The World of Python Libraries
+
+HacSoc 9/9/15
 
 Stephen Brennan
 
@@ -21,6 +23,12 @@ Stephen Brennan
 
 By using <del>other people's code</del> <ins>libraries</ins>!
 
+This is a guide to Python's libraries.
+
+Don't take notes, my slides are at:
+
+<http://stephen-brennan.com/talks>.
+
 {{site.nextslide}}
 
 ## The best Python libraries are ...
@@ -29,10 +37,11 @@ By using <del>other people's code</del> <ins>libraries</ins>!
 
 - Useful basics:
   [`collections`](https://docs.python.org/3/library/collections.html),
-  [`pprint`](https://docs.python.org/3/library/pprint.html),
+  [`re`](https://docs.python.org/3/library/re.html),
   [`random`](https://docs.python.org/3/library/random.html),
   [`argparse`](https://docs.python.org/3/library/argparse.html),
   [`logging`](https://docs.python.org/3/library/logging.html),
+  [`pprint`](https://docs.python.org/3/library/pprint.html),
   [`unittest`](https://docs.python.org/3/library/unittest.html).
 - Basic networking: [`socket`](https://docs.python.org/3/library/socket.html).
 - Reading/writing data:
@@ -42,8 +51,8 @@ By using <del>other people's code</del> <ins>libraries</ins>!
 - Concurrency: [`threading`](https://docs.python.org/3/library/threading.html),
   [`multiprocessing`](https://docs.python.org/3/library/collections.html).
 - High-level: [`itertools`](https://docs.python.org/3/library/itertools.html),
-  [`functools`](https://docs.python.org/3/library/functools.html),
-- Utility: [`os`](https://docs.python.org/3/library/os.html).
+  [`functools`](https://docs.python.org/3/library/functools.html).
+- Utility: [`os`](https://docs.python.org/3/library/os.html),
   [`sys`](https://docs.python.org/3/library/sys.html),
   [`subprocess`](https://docs.python.org/3/library/subprocess.html).
 - See the full list [here](https://docs.python.org/3/library/index.html).

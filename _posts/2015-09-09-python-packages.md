@@ -72,7 +72,7 @@ Don't take notes, my slides are at:
 
 {{site.nextslide}}
 
-## Web development
+## Web development frameworks
 
 - [Django](https://www.djangoproject.com/) - widespread MVC framework, used by
   Instagram, Pinterest, Disqus, Bitbucket, ...
@@ -80,6 +80,14 @@ Don't take notes, my slides are at:
 - [Tornado](http://www.tornadoweb.org/en/stable/) - scalable, non-blocking
   networking library that works well for web dev
 - Other common names: Pyramid, Zope, Web.py
+
+{{site.nextslide}}
+
+## Wed development tools
+
+- [Jinja2](http://jinja.pocoo.org/) - simple templating system for HTML (or any
+  other text file)
+- [MarkupSafe](http://www.pocoo.org/projects/markupsafe/) - HTML escaping!
 
 {{site.nextslide}}
 
@@ -92,5 +100,19 @@ Don't take notes, my slides are at:
   [object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping),
   used by Dropbox, Hulu, reddit, Yelp, Uber, ...
 - Django has a good built-in object relational mapper, too.
+
+{{site.nextslide}}
+
+## Web scraping
+
+- [Requests](http://docs.python-requests.org/en/latest/) - the **only** way to
+  make HTTP requests (e.g. download web pages).  Used by Amazon, Google,
+  Twitter, Mozilla, PayPal, ...
+- [lxml](http://lxml.de/) - parser for HTML and XML.  *Fast,* because it uses C
+  libraries to do the heavy lifting
+- [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) - "parser" for
+  *badly written* HTML.
+- [Scrapy](http://scrapy.org/) - web scraping "framework" that lends itself to
+  making crawlers.  Python 2 only :(
 
 {{site.endslide}}

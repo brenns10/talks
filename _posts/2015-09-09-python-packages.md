@@ -15,11 +15,38 @@ Stephen Brennan
 
 {{site.nextslide}}
 
-## Now that you know Python...
+## Now that you know Python ...
 
 ... how do you make something exciting?
 
 By using <del>other people's code</del> <ins>libraries</ins>!
+
+{{site.nextslide}}
+
+## The best Python libraries are ...
+
+... the standard libraries!
+
+- Useful basics:
+  [`collections`](https://docs.python.org/3/library/collections.html),
+  [`pprint`](https://docs.python.org/3/library/pprint.html),
+  [`random`](https://docs.python.org/3/library/random.html),
+  [`argparse`](https://docs.python.org/3/library/argparse.html),
+  [`logging`](https://docs.python.org/3/library/logging.html),
+  [`unittest`](https://docs.python.org/3/library/unittest.html).
+- Basic networking: [`socket`](https://docs.python.org/3/library/socket.html).
+- Reading/writing data:
+  [`pickle`](https://docs.python.org/3/library/pickle.html),
+  [`csv`](https://docs.python.org/3/library/csv.html),
+  [`json`](https://docs.python.org/3/library/json.html).
+- Concurrency: [`threading`](https://docs.python.org/3/library/threading.html),
+  [`multiprocessing`](https://docs.python.org/3/library/collections.html).
+- High-level: [`itertools`](https://docs.python.org/3/library/itertools.html),
+  [`functools`](https://docs.python.org/3/library/functools.html),
+- Utility: [`os`](https://docs.python.org/3/library/os.html).
+  [`sys`](https://docs.python.org/3/library/sys.html),
+  [`subprocess`](https://docs.python.org/3/library/subprocess.html).
+- See the full list [here](https://docs.python.org/3/library/index.html).
 
 {{site.nextslide}}
 

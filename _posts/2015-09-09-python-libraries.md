@@ -83,7 +83,7 @@ Don't take notes, my slides are at:
 
 {{site.nextslide}}
 
-## Wed development tools
+## Web development tools
 
 - [Jinja2](http://jinja.pocoo.org/) - simple templating system for HTML (or any
   other text file)

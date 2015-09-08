@@ -170,4 +170,16 @@ science research (especially Bioinformatics)
     - Used by Google to create Deep Dream images
     - **Very difficult to install.**
 
+{{site.nextslide}}
+
+## Utilities
+
+- [Colorama](https://pypi.python.org/pypi/colorama) - cross platform colored
+  terminal output
+- [Pygments](http://pygments.org/) - syntax highlighter, very useful for
+  code-related websites
+- [Netaddr](https://pythonhosted.org/netaddr/) - "library for representing and
+  manipulating network addresses" such as IP addresses and CIDR ranges
+- [Pillow](https://pypi.python.org/pypi/Pillow/2.0.0) - Python imaging library
+
 {{site.endslide}}

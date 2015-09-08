@@ -115,4 +115,17 @@ Don't take notes, my slides are at:
 - [Scrapy](http://scrapy.org/) - web scraping "framework" that lends itself to
   making crawlers.  Python 2 only :(
 
+{{site.nextslide}}
+
+## Testing
+
+- [Nose](https://nose.readthedocs.org/en/latest/#) - unit test runner that
+  extends the standard library.
+- [Coverage](http://nedbatchelder.com/code/coverage/) - measure code coverage of
+  your tests
+- [Tox](http://tox.readthedocs.org/en/latest/) - automated framework for testing
+  on multiple Python versions and environments
+- [factory_boy](https://factoryboy.readthedocs.org/en/latest/) - automatically
+  generate valid objects to make testing easier
+
 {{site.endslide}}

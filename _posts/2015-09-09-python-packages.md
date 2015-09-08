@@ -216,4 +216,16 @@ science research (especially Bioinformatics)
   [this](http://factoryboy.readthedocs.org/en/latest/).
 - It can be used with C and C++, or to write any non-code related documentation.
 
+{{site.nextslide}}
+
+## Conclusion
+
+- Whenever you need to do something in Python, spend 5 minutes perusing the
+  standard library.  You may turn something up!
+- You can almost always turn up a useful Python library with a quick Google
+  search.
+- You'll find strong support for research, web development, web scraping, and
+  automating simple tasks.
+- Try picking a couple Python libraries and see how you can combine them!
+
 {{site.endslide}}

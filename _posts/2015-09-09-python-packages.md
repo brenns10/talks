@@ -182,4 +182,26 @@ science research (especially Bioinformatics)
   manipulating network addresses" such as IP addresses and CIDR ranges
 - [Pillow](https://pypi.python.org/pypi/Pillow/2.0.0) - Python imaging library
 
+{{site.nextslide}}
+
+## Automation
+
+- [Selenium](http://docs.seleniumhq.org/) - library for automating web browsers
+- [Ansible](http://www.ansible.com/home), [Fabric](http://www.fabfile.org/),
+  [SaltStack](http://saltstack.com/) - all different approaches to remotely
+  managing lots of computers (like servers)
+    - Fabric is a good way to start for deploying your web app!
+
+{{site.nextslide}}
+
+## Miscellaneous
+
+- [redis](https://pypi.python.org/pypi/redis/) - Redis is a key-value database.
+  You can use it from Python with this client.
+- [Celery](http://www.celeryproject.org/) - A task queue library.  Useful for
+  offloading heavy computation from web servers onto other machines.
+- [PyParsing](https://pypi.python.org/pypi/pyparsing/2.0.3) - Simple tool for
+  creating and parsing grammars.
+- [PyGame](http://pygame.org/news.html) - Library for making games in Python.
+
 {{site.endslide}}

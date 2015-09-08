@@ -158,8 +158,6 @@ of research that involves numerical computing.
 
 ## More Science
 
-- [Cython](http://cython.org/) - superset of Python that translates to C and
-  allows you to easily write native Python extensions
 - [scikit-learn](http://scikit-learn.org/stable/) - provides simple and
   efficient machine learning algorithms
 - [NetworkX](http://networkx.github.io/) - graph library that provides standard

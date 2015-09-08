@@ -73,23 +73,5 @@ You can do LaTeX by employing the double-dollar sign `$$\int_a^b f(x)
 perfectly supported under MathJax, so it's worth doing some previewing with
 Jekyll before deploying!
 
-Quirks
-------
-
-The Jekyll site is designed to run on `http://stephen-brennan.com/talks/`.  In
-order to avoid duplicating too much of my website's content and style info, I
-rely on stylesheets and other resources from the main repository.  I just copied
-and modified the relevant layouts and includes into here.  There are a few
-quirks that make using this a bit annoying, especially when doing `jekyll serve`
-locally:
-
-- The index page refers to stylesheets that aren't present when you're testing
-  locally.  So, the index page will appear styleless and a bit ugly.  That's not
-  a huge deal, but it's annoying.
-- The index page constructs links to slides by concatenating `site.url` with
-  `page.url`.  I had to do this to make sure that the links function properly
-  when I deploy, but the downside is that when you preview locally, the links
-  will take you out to `stephen-brennan.com`, not the local draft.
-
 [theme list]: https://github.com/hakimel/reveal.js/tree/master/css/theme
 [syntax]: https://cdnjs.com/libraries/highlight.js

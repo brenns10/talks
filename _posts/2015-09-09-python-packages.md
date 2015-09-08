@@ -204,4 +204,16 @@ science research (especially Bioinformatics)
   creating and parsing grammars.
 - [PyGame](http://pygame.org/news.html) - Library for making games in Python.
 
+{{site.nextslide}}
+
+## Documentation
+
+- If you ever write your own library that's anything more than a couple
+  functions, you need documentation.
+- [Sphinx](http://sphinx-doc.org/) is the best tool for creating documentation
+  for Python libraries.
+- Creates pretty documentation like
+  [this](http://factoryboy.readthedocs.org/en/latest/).
+- It can be used with C and C++, or to write any non-code related documentation.
+
 {{site.endslide}}

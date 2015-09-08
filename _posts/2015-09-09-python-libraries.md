@@ -106,8 +106,8 @@ Don't take notes, my slides are at:
 
 ## Web scraping
 
-- [Requests](http://docs.python-requests.org/en/latest/) - the **only** way to
-  make HTTP requests (e.g. download web pages).  Used by Amazon, Google,
+- [Requests](http://docs.python-requests.org/en/latest/) - the **easiest** way
+  to make HTTP requests (e.g. download web pages).  Used by Amazon, Google,
   Twitter, Mozilla, PayPal, ...
 - [lxml](http://lxml.de/) - parser for HTML and XML.  *Fast,* because it uses C
   libraries to do the heavy lifting

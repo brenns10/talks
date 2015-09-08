@@ -200,6 +200,8 @@ of research that involves numerical computing.
   offloading heavy computation from web servers onto other machines.
 - [PyParsing](https://pypi.python.org/pypi/pyparsing/2.0.3) - Simple tool for
   creating and parsing grammars.
+- [PLY](http://www.dabeaz.com/ply/) - more powerful tool for parsing grammars,
+  preferred by Tim Henderson.
 - [PyGame](http://pygame.org/news.html) - Library for making games in Python.
 
 {{site.nextslide}}

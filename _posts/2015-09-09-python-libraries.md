@@ -80,7 +80,7 @@ Don't take notes, my slides are at:
 - [Flask](http://flask.pocoo.org/) - small "micro-framework" for simple apps.
 - [Tornado](http://www.tornadoweb.org/en/stable/) - scalable, non-blocking
   networking library that works well for web dev
-- Other common names: Pyramid, Zope, Web.py
+- Other common names: [Pyramid](http://www.pylonsproject.org/), Zope, Web.py
 
 {{site.nextslide}}
 

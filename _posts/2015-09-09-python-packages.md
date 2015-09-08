@@ -128,4 +128,46 @@ Don't take notes, my slides are at:
 - [factory_boy](https://factoryboy.readthedocs.org/en/latest/) - automatically
   generate valid objects to make testing easier
 
+{{site.nextslide}}
+
+## Scientific
+
+Python is one of the best ecosystems for doing scientific and numerical
+computing.  Its advantage over specialized systems (Mathematica, Octave, Matlab)
+is its wide range of general programming libraries to complement the specialized
+scientific libraries.  You'll find it is a strong contender if you do computer
+science research (especially Bioinformatics)
+
+{{site.nextslide}}
+
+## Scientific Python Stack
+
+- [NumPy](http://www.numpy.org/) - efficient numerical computations with
+  vectors, matrices, and other multidimensional arrays
+- [SciPy](http://www.scipy.org/) - scientific algorithms (clustering,
+  integration, linear algebra, etc)
+- [Pandas](http://pandas.pydata.org/) - extends NumPy data structures with data
+  labels, advanced manipulation, broadcasting, slicing, querying, and I/O.
+- [Matplotlib](http://matplotlib.org/) - plotting library for producing
+  professional figures
+- [IPython](http://www.ipython.org) - feature-rich interactive console and
+  "notebook" for doing scientific computing and viewing results
+- [SymPy](http://www.sympy.org/en/index.html) - Python computer algebra system
+
+{{site.nextslide}}
+
+## More Science
+
+- [Cython](http://cython.org/) - superset of Python that translates to C and
+  allows you to easily write native Python extensions
+- [scikit-learn](http://scikit-learn.org/stable/) - provides simple and
+  efficient machine learning algorithms
+- [NetworkX](http://networkx.github.io/) - graph library that provides standard
+  algorithms, analysis tools, etc.
+- [NLTK](http://www.nltk.org) - a natural language processing library
+- [Caffe](http://caffe.berkeleyvision.org/) - "deep learning" framework with a
+  Python interface
+    - Used by Google to create Deep Dream images
+    - **Very difficult to install.**
+
 {{site.endslide}}

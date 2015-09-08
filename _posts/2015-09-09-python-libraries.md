@@ -136,8 +136,8 @@ Don't take notes, my slides are at:
 Python is one of the best ecosystems for doing scientific and numerical
 computing.  Its advantage over specialized systems (Mathematica, Octave, Matlab)
 is its wide range of general programming libraries to complement the specialized
-scientific libraries.  You'll find it is a strong contender if you do computer
-science research (especially Bioinformatics)
+scientific libraries.  You'll find it is a strong contender if you do any sort
+of research that involves numerical computing.
 
 {{site.nextslide}}
 

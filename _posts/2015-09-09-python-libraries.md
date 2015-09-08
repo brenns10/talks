@@ -97,10 +97,9 @@ Don't take notes, my slides are at:
 - [Psycopg2](http://initd.org/psycopg/) - interface to PostgreSQL
 - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - standard library
   interface for small databases in local files
-- [SQLAlchemy](http://www.sqlalchemy.org/) - widely used
-  [object relational mapper](https://en.wikipedia.org/wiki/Object-relational_mapping),
-  used by Dropbox, Hulu, reddit, Yelp, Uber, ...
-- Django has a good built-in object relational mapper, too.
+- [SQLAlchemy](http://www.sqlalchemy.org/) - widely used "database abstraction
+  layer" used by Dropbox, Hulu, reddit, Yelp, Uber, ...
+- Django has a good built-in database abstraction layer, too.
 
 {{site.nextslide}}
 

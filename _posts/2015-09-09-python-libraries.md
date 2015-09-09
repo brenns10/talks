@@ -5,7 +5,6 @@ description: >
   an introduction to Python, and this 15-minute presentation gives an overview
   of the world of Python packages, the source of Python's power.
 layout: presentation
-theme: moon
 ---
 
 {{site.startslide}}

@@ -178,6 +178,8 @@ of research that involves numerical computing.
 - [Netaddr](https://pythonhosted.org/netaddr/) - "library for representing and
   manipulating network addresses" such as IP addresses and CIDR ranges
 - [Pillow](https://pypi.python.org/pypi/Pillow/2.0.0) - Python imaging library
+- [PyCrypto](https://www.dlitz.net/software/pycrypto/) - Never roll your own
+  crypto.
 
 {{site.nextslide}}
 

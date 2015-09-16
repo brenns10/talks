@@ -197,7 +197,15 @@ int do_stuff(int x) {
 
 {{site.nextslide}}
 
-<img href="{{site.baseurl}}/images/main.o.png"></img>
+<img style="max-width: 100%;" src="{{site.baseurl}}/images/main.o.png"></img>
+
+{{site.nextslide}}
+
+<img style="max-height: 600px; max-width: 100%;" src="{{site.baseurl}}/images/stuff.o.png"></img>
+
+{{site.nextslide}}
+
+<img style="max-width: 100%;" src="{{site.baseurl}}/images/linked.png"></img>
 
 {{site.endslide}}
 {{site.endvertical}}

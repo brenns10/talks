@@ -138,3 +138,66 @@ typedef struct {
 
 {{site.endslide}}
 {{site.endvertical}}
+{{site.startvertical}}
+{{site.startslide}}
+
+## How Do C and Java Work?
+
+{{site.nextslide}}
+
+## Java
+
+1. `javac` translates Java into JVM bytecode
+2. You end up with a bunch of `.class` files
+3. `java ClassName`:
+   1. JVM searches for `ClassName.class` in your "classpath"
+   2. JVM loads the first one it finds
+   3. JVM calls `main()`
+4. JVM "interprets" the bytecode.
+5. JVM may even convert the bytecode to machine code to run faster.  This is
+   called "Just In Time compilation," or JIT.
+
+{{site.nextslide}}
+
+## C
+
+1. Your C compiler converts each source file into an object file.
+   - Object file: mostly compiled code, except for references to outside names.
+2. Your compiler then combines each object file into an executable.
+   - This is called "linking"
+   - It hooks up all the unknown names from the object files with the code from
+     other object files that defines them.
+3. You run the code.  Your OS loads the program into memory and starts executing
+   at the `main()` function.
+
+{{site.nextslide}}
+
+## How Linking Works
+
+Say you have two code files:  `main.c`:
+
+```c
+#include <stdio.h>
+#include "stuff.h"
+int main(int argc, char *argv[]) {
+  int a;
+  printf("Doing stuff.\n");
+  a = do_stuff(5);
+  printf("Finished doing stuff.\n");
+}
+```
+
+And `stuff.c`:
+
+```c
+int do_stuff(int x) {
+  return x + 1;
+}
+```
+
+{{site.nextslide}}
+
+<img href="{{site.baseurl}}/images/main.o.png"></img>
+
+{{site.endslide}}
+{{site.endvertical}}

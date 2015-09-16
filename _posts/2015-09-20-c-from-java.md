@@ -207,5 +207,43 @@ int do_stuff(int x) {
 
 <img style="max-width: 100%;" src="{{site.baseurl}}/images/linked.png"></img>
 
+{{site.nextslide}}
+
+## Header Files
+
+Missing functions are resolved when you link objects together.
+
+But, the compiler still needs to know what the function returns, what arguments
+it takes, etc.
+
+So, you put the function declaration in a header file.
+
+{{site.nextslide}}
+
+## Declarations vs Definitions
+
+A declaration for `do_stuff()`:
+
+```c
+int do_stuff(int);
+```
+
+A definition for `do_stuff()`:
+
+```c
+int do_stuff(int x) {
+    return x + 1;
+}
+```
+
+For variables:
+
+```c
+int x;     // declaration of x
+x = 5;     // later, a definition
+// OR...
+int x = 5; // do both at once
+```
+
 {{site.endslide}}
 {{site.endvertical}}

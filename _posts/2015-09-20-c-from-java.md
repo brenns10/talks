@@ -245,5 +245,166 @@ x = 5;     // later, a definition
 int x = 5; // do both at once
 ```
 
+{{site.nextslide}}
+
+## Only put declarations in headers!
+
+Never put definitions in headers!
+
+{{site.nextslide}}
+
+## C only looks like Java
+
+- But C isn't anything like Java
+- It's more like slightly higher level, portable assembly
+- C gives you direct access to your process's memory
+
+{{site.nextslide}}
+
+## Garbage Collection in Java
+
+- When you use `new` in Java, it allocates space in memory for the instance
+- Once the instance is done being used, the memory space is "freed", so other
+  objects could be put there.
+- C doesn't do this!
+    - You allocate and free memory manually
+    - If you forget to free, you get a "memory leak"
+
+{{site.nextslide}}
+
+## C Strings
+
+- In Java, Strings are immutable, and fairly easy to use.
+- In C, strings are just arrays of `char`s, terminated by a NUL character.
+- Doing things like concatenating strings usually requires memory allocation to
+  create a new string.
+
+{{site.endslide}}
+{{site.endvertical}}
+{{site.startvertical}}
+{{site.startslide}}
+
+## Debugging C
+
+{{site.nextslide}}
+
+## printf debugging
+
+A classic, but not very good way to debug your code.
+
+Scattered `printf` statements make your code hard to read, and your output less
+concise.
+
+However, in a pinch, `printf` debugging is an *ok* way to do it.
+
+Thankfully, you have some better options.
+
+{{site.nextslide}}
+
+## Debug Symbols
+
+In order to use a debugger, you need to enable "debug symbols" when you compile.
+
+My makefile's `debug` configuration does this for you.  Just `make CFG=debug`,
+and then debug the program `bin/debug/main`.
+
+Or, use the `-g` flag when you compile.
+
+{{site.nextslide}}
+
+## GDB
+
+Live demo time (rough transcript below)
+
+```bash
+$ gdb bin/debug/main
+GNU gdb (GDB) 7.10
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-unknown-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from bin/debug/main...done.
+(gdb) break ex_debug
+Breakpoint 1 at 0x40087c: file src/debug.c, line 19.
+(gdb) run debug
+Starting program: /home/stephen/repos/c-from-java/bin/debug/main debug
+
+Breakpoint 1, ex_debug () at src/debug.c:19
+19        a = 5;
+(gdb) print a
+$1 = 32767
+(gdb) next
+20        b = 3;
+(gdb) print a
+$2 = 5
+(gdb) print b
+$3 = -134225616
+(gdb) step
+21        *c = a + b;
+(gdb) print b
+$4 = 3
+(gdb) continue
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400896 in ex_debug () at src/debug.c:21
+21        *c = a + b;
+(gdb) backtrace
+#0  0x0000000000400896 in ex_debug () at src/debug.c:21
+#1  0x000000000040083f in main (argc=2, argv=0x7fffffffe598) at src/main.c:35
+(gdb) quit
+A debugging session is active.
+
+        Inferior 1 [process 3618] will be killed.
+
+Quit anyway? (y or n) y
+```
+
+{{site.nextslide}}
+
+## GDB Main Points
+
+- break: set breakpoints on functions or file:line
+- Put command line arguments after `run`.
+- next: "step over", step: "step into", continue: "continue"
+- **backtrace** is probably the most useful for debugging segfaults.
+- Pros of GDB
+    - Can use it over SSH.
+- Cons
+    - Rather difficult to use.
+
+{{site.nextslide}}
+
+## GUI Debuggers
+
+- GDB-TUI: do the key sequence "Control-x a" in GDB to get a crappy GUI.
+- Emacs GDB Mode: if you already use Emacs, this may work for you.
+- Recommended: [Nemiver](https://wiki.gnome.org/Apps/Nemiver/)
+    - Have to use this on your own Linux machine or VM.
+- Others:
+    - Eclipse CDT has a debugger
+    - A list: https://sourceware.org/gdb/wiki/GDB%20Front%20Ends
+
+{{site.nextslide}}
+
+And now, a demo of Nemiver!
+
+{{site.nextslide}}
+
+## Valgrind
+
+- Valgrind is a tool that you can use to check for all sorts of memory errors.
+- Especially, it can find memory leaks.
+- `valgrind bin/release/main`
+
 {{site.endslide}}
 {{site.endvertical}}

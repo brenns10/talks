@@ -279,10 +279,7 @@ Never put definitions in headers!
 - Doing things like concatenating strings usually requires memory allocation to
   create a new string.
 
-{{site.endslide}}
-{{site.endvertical}}
-{{site.startvertical}}
-{{site.startslide}}
+{{site.nextvertical}}
 
 ## Debugging C
 
@@ -405,6 +402,53 @@ And now, a demo of Nemiver!
 - Valgrind is a tool that you can use to check for all sorts of memory errors.
 - Especially, it can find memory leaks.
 - `valgrind bin/release/main`
+
+{{site.nextvertical}}
+
+## Getting help
+
+{{site.nextslide}}
+
+## Man Pages
+
+- C library is extremely well documented in manpages.
+- `man function_name` usually gets you documentation
+    - If that doesn't work, try `man 3p function_name`.
+- Not sure what man page you want?
+- `apropos [search term]` will give back a list of man pages to check.
+
+{{site.nextslide}}
+
+## Online Specification
+
+- I find the Unix specification to be quite good for answering questions about
+  header files.
+- http://pubs.opengroup.org/onlinepubs/9699919799/
+- Use the search function, or go to Section 13, headers!
+
+{{site.nextslide}}
+
+## Hacker Society!
+
+- Many of us have taken EECS 338, or know C.
+- Glennan student lounge may have people who can help.
+- Check IRC
+- Facebook group
+
+{{site.nextslide}}
+
+## Damage Control
+
+- Use Git!
+- Don't do anything stupid!  Collaboration is only OK if explicitly stated.
+- Given the choice between turning in:
+    - Something that compiles, but doesn't fully complete the assignment, or
+    - Something that doesn't compile, but has more assignment code,
+
+... **ALWAYS** turn in code that compiles (test it on the EECS 338 VM).
+
+Your TA's don't want to try to fix code that you didn't bother to get to
+compile.  Code that compiles and mostly runs gets more points!
 
 {{site.endslide}}
 {{site.endvertical}}

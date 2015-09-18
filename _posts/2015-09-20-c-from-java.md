@@ -1,9 +1,10 @@
 ---
 title: C from Java
 description: >
-  C's syntax is dangerously similar to Java's, making it difficult to work with
-  if you haven't spent much time learning about their differences.  This talk
-  aims to bridge the gap for students taking CWRU's EECS 338.
+  UNDER CONSTRUCTION!  C's syntax is dangerously similar to Java's, making it
+  difficult to work with if you haven't spent much time learning about their
+  differences.  This talk aims to bridge the gap for students taking CWRU's EECS
+  338.
 layout: presentation
 theme: night
 ---

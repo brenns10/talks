@@ -18,3 +18,5 @@ endslide: "</script></section>"
 
 startvertical: "<section>"
 endvertical: "</section>"
+
+nextvertical: "</script></section></section><section><section data-markdown><script type='text/template'>"

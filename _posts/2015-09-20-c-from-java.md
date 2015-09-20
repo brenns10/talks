@@ -231,6 +231,22 @@ int x = 5; // do both at once
 
 Never put definitions in headers!
 
+Example time!
+
+{{site.nextslide}}
+
+## Always use include guards in headers
+
+```c
+#ifndef NAME_OF_HEADER
+#define NAME_OF_HEADER
+// header file contents.
+#endif
+```
+
+Otherwise, the header may be included multiple times in a file, and end up
+redeclaring everything in the header.  Which is an error :(
+
 {{site.nextvertical}}
 
 ## Syntax

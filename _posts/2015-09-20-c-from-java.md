@@ -74,6 +74,57 @@ Many more things you may not need in EECS 338.
 
 {{site.nextslide}}
 
+## C only looks like Java
+
+- But C isn't anything like Java
+- Java runs on a virtual machine that manages objects
+- C compiles to assembly code that runs directly on your processor
+- C is more like slightly higher level, portable assembly
+- C gives you direct access to your process's memory
+
+{{site.nextslide}}
+
+## Types of Memory in C
+
+- **Static:** memory that is known and set aside when you compile your code.
+    - EG: global variables
+- **Heap:** memory that will be allocated and used when your program is run.
+    - EG: `malloc()` and `free()`
+- **Stack:** memory that is known at compile time, and is alloted when a
+  function is called.
+    - EG: local variables
+
+(See diagram of memory model on board.)
+
+{{site.nextslide}}
+
+## Garbage Collection in Java
+
+- When you use `new` in Java, it allocates space in memory for the instance
+- Once the instance is done being used, the memory space is "freed", so other
+  objects could be put there.
+- C doesn't do this!
+    - You allocate and free memory manually
+    - If you forget to free, you get a "memory leak"
+
+{{site.nextslide}}
+
+## C Strings
+
+- In Java, Strings are immutable, and fairly easy to use.
+- In C, strings are just arrays of `char`s, terminated by a NUL character.
+- Doing things like concatenating strings usually requires memory allocation to
+  create a new string.
+- `strlen()`, `strncpy()`, `strncat()`, `strncmp()`.
+
+{{site.nextvertical}}
+
+## Compiling
+
+Practical consquences of how C compiles.
+
+{{site.nextslide}}
+
 ## Java
 
 1. `javac` translates Java into JVM bytecode
@@ -101,31 +152,84 @@ Many more things you may not need in EECS 338.
 
 {{site.nextslide}}
 
-## C only looks like Java
+## How Linking Works
 
-- But C isn't anything like Java
-- It's more like slightly higher level, portable assembly
-- C gives you direct access to your process's memory
+Say you have two code files:  `main.c`:
+
+```c
+#include <stdio.h>
+#include "stuff.h"
+int main(int argc, char *argv[]) {
+  int a;
+  printf("Doing stuff.\n");
+  a = do_stuff(5);
+  printf("Finished doing stuff.\n");
+}
+```
+
+And `stuff.c`:
+
+```c
+int do_stuff(int x) {
+  return x + 1;
+}
+```
 
 {{site.nextslide}}
 
-## Garbage Collection in Java
-
-- When you use `new` in Java, it allocates space in memory for the instance
-- Once the instance is done being used, the memory space is "freed", so other
-  objects could be put there.
-- C doesn't do this!
-    - You allocate and free memory manually
-    - If you forget to free, you get a "memory leak"
+<img style="max-width: 100%;" src="{{site.baseurl}}/images/main.o.png"></img>
 
 {{site.nextslide}}
 
-## C Strings
+<img style="max-height: 600px; max-width: 100%;" src="{{site.baseurl}}/images/stuff.o.png"></img>
 
-- In Java, Strings are immutable, and fairly easy to use.
-- In C, strings are just arrays of `char`s, terminated by a NUL character.
-- Doing things like concatenating strings usually requires memory allocation to
-  create a new string.
+{{site.nextslide}}
+
+<img style="max-width: 100%;" src="{{site.baseurl}}/images/linked.png"></img>
+
+{{site.nextslide}}
+
+## Header Files
+
+Missing functions are resolved when you link objects together.
+
+But, the compiler still needs to know what the function returns, what arguments
+it takes, etc.
+
+So, you put the function declaration in a header file.
+
+{{site.nextslide}}
+
+## Declarations vs Definitions
+
+A declaration for `do_stuff()`:
+
+```c
+int do_stuff(int);
+```
+
+A definition for `do_stuff()`:
+
+```c
+int do_stuff(int x) {
+    return x + 1;
+}
+```
+
+For variables:
+
+```c
+int x;     // declaration of x
+x = 5;     // later, a definition
+// OR...
+int x = 5; // do both at once
+```
+
+{{site.nextslide}}
+
+## Only put declarations in headers!
+
+Never put definitions in headers!
 
 {{site.nextvertical}}
 
@@ -193,90 +297,49 @@ typedef struct {
 * `static` functions can only be used in the file where they're defined.
     * Good for helper functions!
 
-{{site.nextslide}}
-
-## Declarations vs Definitions
-
-A declaration for `do_stuff()`:
-
-```c
-int do_stuff(int);
-```
-
-A definition for `do_stuff()`:
-
-```c
-int do_stuff(int x) {
-    return x + 1;
-}
-```
-
-For variables:
-
-```c
-int x;     // declaration of x
-x = 5;     // later, a definition
-// OR...
-int x = 5; // do both at once
-```
-
 {{site.nextvertical}}
 
-## Compiling
+## Pointers
 
 {{site.nextslide}}
 
-## How Linking Works
-
-Say you have two code files:  `main.c`:
+Create a pointer to an int:
 
 ```c
-#include <stdio.h>
-#include "stuff.h"
-int main(int argc, char *argv[]) {
-  int a;
-  printf("Doing stuff.\n");
-  a = do_stuff(5);
-  printf("Finished doing stuff.\n");
-}
+int *pointer_to_int;
 ```
 
-And `stuff.c`:
+Get the address of a variable:
 
 ```c
-int do_stuff(int x) {
-  return x + 1;
-}
+int blah = 5;
+pointer_to_int = &blah;
+```
+
+Dereference a pointer:
+
+```c
+printf("value pointed by pointer_to_int is: %d\n", *pointer_to_int);
+// value pointed by pointer_to_int is: 5
 ```
 
 {{site.nextslide}}
 
-<img style="max-width: 100%;" src="{{site.baseurl}}/images/main.o.png"></img>
+## Arrays
 
-{{site.nextslide}}
+- Arrays behave *like* pointers.
 
-<img style="max-height: 600px; max-width: 100%;" src="{{site.baseurl}}/images/stuff.o.png"></img>
+```c
+int indices[] = {0, 1, 2, 3, 4, 5, 6, 7};
+printf("indices[0]: %d\n", *indices);
+// indices[0]: 0
+printf("indices[1]: %d\n", *(indices + 1));
+// indices[1]: 1
 
-{{site.nextslide}}
+// etc.
+```
 
-<img style="max-width: 100%;" src="{{site.baseurl}}/images/linked.png"></img>
-
-{{site.nextslide}}
-
-## Header Files
-
-Missing functions are resolved when you link objects together.
-
-But, the compiler still needs to know what the function returns, what arguments
-it takes, etc.
-
-So, you put the function declaration in a header file.
-
-{{site.nextslide}}
-
-## Only put declarations in headers!
-
-Never put definitions in headers!
+This is why arrays are zero-indexed!
 
 {{site.nextvertical}}
 

@@ -68,10 +68,66 @@ Many more things you may not need in EECS 338.
   - You can leave `TEST_TARGET`, `STATIC_LIBS`, and `EXTRA_INCLUDES` alone.
 - You should never need to `make clean`!
 
-{{site.endslide}}
-{{site.endvertical}}
-{{site.startvertical}}
-{{site.startslide}}
+{{site.nextvertical}}
+
+## Fundamental Differences
+
+{{site.nextslide}}
+
+## Java
+
+1. `javac` translates Java into JVM bytecode
+2. You end up with a bunch of `.class` files
+3. `java ClassName`:
+   1. JVM searches for `ClassName.class` in your "classpath"
+   2. JVM loads the first one it finds
+   3. JVM calls `main()`
+4. JVM "interprets" the bytecode.
+5. JVM may even convert the bytecode to machine code to run faster.  This is
+   called "Just In Time compilation," or JIT.
+
+{{site.nextslide}}
+
+## C
+
+1. Your C compiler converts each source file into an object file.
+   - Object file: mostly compiled code, except for references to outside names.
+2. Your compiler then combines each object file into an executable.
+   - This is called "linking"
+   - It hooks up all the unknown names from the object files with the code from
+     other object files that defines them.
+3. You run the code.  Your OS loads the program into memory and starts executing
+   at the `main()` function.
+
+{{site.nextslide}}
+
+## C only looks like Java
+
+- But C isn't anything like Java
+- It's more like slightly higher level, portable assembly
+- C gives you direct access to your process's memory
+
+{{site.nextslide}}
+
+## Garbage Collection in Java
+
+- When you use `new` in Java, it allocates space in memory for the instance
+- Once the instance is done being used, the memory space is "freed", so other
+  objects could be put there.
+- C doesn't do this!
+    - You allocate and free memory manually
+    - If you forget to free, you get a "memory leak"
+
+{{site.nextslide}}
+
+## C Strings
+
+- In Java, Strings are immutable, and fairly easy to use.
+- In C, strings are just arrays of `char`s, terminated by a NUL character.
+- Doing things like concatenating strings usually requires memory allocation to
+  create a new string.
+
+{{site.nextvertical}}
 
 ## Syntax
 
@@ -137,39 +193,36 @@ typedef struct {
 * `static` functions can only be used in the file where they're defined.
     * Good for helper functions!
 
-{{site.endslide}}
-{{site.endvertical}}
-{{site.startvertical}}
-{{site.startslide}}
-
-## How Do C and Java Work?
-
 {{site.nextslide}}
 
-## Java
+## Declarations vs Definitions
 
-1. `javac` translates Java into JVM bytecode
-2. You end up with a bunch of `.class` files
-3. `java ClassName`:
-   1. JVM searches for `ClassName.class` in your "classpath"
-   2. JVM loads the first one it finds
-   3. JVM calls `main()`
-4. JVM "interprets" the bytecode.
-5. JVM may even convert the bytecode to machine code to run faster.  This is
-   called "Just In Time compilation," or JIT.
+A declaration for `do_stuff()`:
 
-{{site.nextslide}}
+```c
+int do_stuff(int);
+```
 
-## C
+A definition for `do_stuff()`:
 
-1. Your C compiler converts each source file into an object file.
-   - Object file: mostly compiled code, except for references to outside names.
-2. Your compiler then combines each object file into an executable.
-   - This is called "linking"
-   - It hooks up all the unknown names from the object files with the code from
-     other object files that defines them.
-3. You run the code.  Your OS loads the program into memory and starts executing
-   at the `main()` function.
+```c
+int do_stuff(int x) {
+    return x + 1;
+}
+```
+
+For variables:
+
+```c
+int x;     // declaration of x
+x = 5;     // later, a definition
+// OR...
+int x = 5; // do both at once
+```
+
+{{site.nextvertical}}
+
+## Compiling
 
 {{site.nextslide}}
 
@@ -221,64 +274,9 @@ So, you put the function declaration in a header file.
 
 {{site.nextslide}}
 
-## Declarations vs Definitions
-
-A declaration for `do_stuff()`:
-
-```c
-int do_stuff(int);
-```
-
-A definition for `do_stuff()`:
-
-```c
-int do_stuff(int x) {
-    return x + 1;
-}
-```
-
-For variables:
-
-```c
-int x;     // declaration of x
-x = 5;     // later, a definition
-// OR...
-int x = 5; // do both at once
-```
-
-{{site.nextslide}}
-
 ## Only put declarations in headers!
 
 Never put definitions in headers!
-
-{{site.nextslide}}
-
-## C only looks like Java
-
-- But C isn't anything like Java
-- It's more like slightly higher level, portable assembly
-- C gives you direct access to your process's memory
-
-{{site.nextslide}}
-
-## Garbage Collection in Java
-
-- When you use `new` in Java, it allocates space in memory for the instance
-- Once the instance is done being used, the memory space is "freed", so other
-  objects could be put there.
-- C doesn't do this!
-    - You allocate and free memory manually
-    - If you forget to free, you get a "memory leak"
-
-{{site.nextslide}}
-
-## C Strings
-
-- In Java, Strings are immutable, and fairly easy to use.
-- In C, strings are just arrays of `char`s, terminated by a NUL character.
-- Doing things like concatenating strings usually requires memory allocation to
-  create a new string.
 
 {{site.nextvertical}}
 
@@ -450,6 +448,10 @@ And now, a demo of Nemiver!
 
 Your TA's don't want to try to fix code that you didn't bother to get to
 compile.  Code that compiles and mostly runs gets more points!
+
+{{site.nextvertical}}
+
+# Questions!
 
 {{site.endslide}}
 {{site.endvertical}}

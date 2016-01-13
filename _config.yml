@@ -1,7 +1,13 @@
-name: "Stephen Brennan"
-url: "http://stephen-brennan.com/talks"
-baseurl: "/talks"
-root: "http://stephen-brennan.com"
+name: Stephen Brennan
+author: Stephen Brennan
+title: Talks by Stephen Brennan
+description: Talks by Stephen Brennan
+keywords: cs programming student talks
+logo: /images/me.jpg
+
+url: http://stephen-brennan.com/talks
+baseurl: /talks
+root: http://stephen-brennan.com
 
 paginate: 5
 paginate_path: "page:num"

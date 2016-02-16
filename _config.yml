@@ -9,6 +9,7 @@ url: http://stephen-brennan.com/talks
 baseurl: /talks
 root: http://stephen-brennan.com
 
+gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
 

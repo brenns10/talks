@@ -5,9 +5,9 @@ description: Talks by Stephen Brennan
 keywords: cs programming student talks
 logo: /images/me.jpg
 
-url: http://stephen-brennan.com/talks
+url: http://brennan.io/talks
 baseurl: /talks
-root: http://stephen-brennan.com
+root: http://brennan.io
 
 paginate: 5
 paginate_path: "page:num"

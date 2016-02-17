@@ -9,11 +9,12 @@ url: http://brennan.io/talks
 baseurl: /talks
 root: http://brennan.io
 
+gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
 
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 permalink: pretty
 
 exclude: ["README.md"]

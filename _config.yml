@@ -7,7 +7,7 @@ logo: /images/me.jpg
 
 url: http://brennan.io/talks
 baseurl: /talks
-root: http://brennan.io
+root: ""
 
 gems: [jekyll-paginate]
 paginate: 5

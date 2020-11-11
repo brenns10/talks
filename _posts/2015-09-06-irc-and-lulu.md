@@ -155,17 +155,6 @@ Stephen Brennan
 
 {{site.nextslide}}
 
-## CWRU IRC people
-
-- `siretrm` - Thomas Murphy
-- `mason` - Andrew Mason
-- `brenns10` - Stephen Brennan
-- `jay_wild` - Aidan Campbell
-- Feel free to ask anyone on IRC who they are, but they may prefer to keep their
-  identity private.
-
-{{site.nextslide}}
-
 ## Meet Lulu!
 
 - Lulu is our IRC chatbot!

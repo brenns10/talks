@@ -2,12 +2,19 @@
 <html>
   {% include head.html %}
   <body>
-  <div id="navigation" class="clearfix">
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/talks/">Talks</a>
-    <a href="/projects">Projects</a>
-    <a href="/resume">Resume</a>
+  <div class="site-content">
+  <nav>
+    <input type="checkbox" id="nav" class="hidden"/>
+    <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+    <div class="nav-container">
+      <ul>
+        <li><a href="/" class="title">Stephen Brennan</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/resume">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
   </div>
 
   {{ content }}
